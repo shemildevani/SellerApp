@@ -12,6 +12,10 @@ abstract class AppSpacing {
   static const h24 = SizedBox(height: 24);
   static const h32 = SizedBox(height: 32);
   static const h34 = SizedBox(height: 34);
+  static const h36 = SizedBox(height: 36);
+  static const h38 = SizedBox(height: 38);
+  static const h40 = SizedBox(height: 40);
+  static const h50 = SizedBox(height: 50);
 
   static const w4 = SizedBox(width: 4);
   static const w6 = SizedBox(width: 6);

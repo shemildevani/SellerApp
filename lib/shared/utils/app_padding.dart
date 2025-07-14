@@ -7,4 +7,5 @@ abstract class AppPadding {
   static const vertical8 = EdgeInsets.symmetric(vertical: 8);
   static const top16 = EdgeInsets.only(top: 16);
   static const appPadding = EdgeInsets.symmetric(horizontal: 16);
+  static const authPadding = EdgeInsets.symmetric(horizontal: 25);
 }

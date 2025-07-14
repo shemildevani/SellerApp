@@ -1,13 +1,13 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-class AppPreference {
-  static final AppPreference _appPreference = AppPreference._internal();
+class AppPref {
+  static final AppPref _appPreference = AppPref._internal();
 
-  factory AppPreference() {
+  factory AppPref() {
     return _appPreference;
   }
 
-  AppPreference._internal();
+  AppPref._internal();
 
   late SharedPreferences _preferences;
 
