@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:seller_app/config/app_color/app_color.dart';
+import 'package:seller_app/screens/data_collection/seller_owner_data/seller_owner.dart';
 import 'package:seller_app/shared/utils/app_padding.dart';
 import 'package:seller_app/shared/utils/app_spacing.dart';
 import 'package:seller_app/shared/widgets/app_button.dart';
+import 'package:seller_app/shared/widgets/app_text.dart';
 
 class OtpScreen extends StatelessWidget {
-  const OtpScreen({super.key,});
-
+  const OtpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     // NewPasswordScreenCnt cnt = Get.put(NewPasswordScreenCnt());
-    final theme = Theme.of(context);
     final formKey = GlobalKey<FormState>();
 
     return Scaffold(
@@ -26,16 +26,18 @@ class OtpScreen extends StatelessWidget {
               child: Column(
                 children: [
                   AppSpacing.h34,
-                  Text(
-                    'Verify Code',
+                  AppText(
+                    text: 'Verify Code',
                     style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                   ),
                   AppSpacing.h8,
-                  Text(
-                    'One Time Password (OTP) has been sent via WhatsApp to',
+                  AppText(
+                    text:
+                        'One Time Password (OTP) has been sent via WhatsApp to',
                     style: TextStyle(fontSize: 14),
+                    textAlign: TextAlign.center,
+                    softWrap: true,
                   ),
-                  Text('', style: TextStyle(fontSize: 14)),
                   AppSpacing.h24,
                   Align(
                     alignment: Alignment.center,
@@ -69,7 +71,14 @@ class OtpScreen extends StatelessWidget {
                   ),
                   AppSpacing.h24,
 
-                  // Obx(() => AppButton(text: 'Verify', onPressed: () {})),
+                  // Obx(() =>
+                  AppButton(
+                    text: 'Verify',
+                    onPressed: () {
+                      Get.to(SellerOwner());
+                    },
+                  ),
+                  // ),
                 ],
               ),
             ),

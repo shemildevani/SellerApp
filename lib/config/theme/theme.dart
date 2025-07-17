@@ -52,14 +52,13 @@ mixin AppTheme {
       bodyMedium: TextStyle(fontSize: 14, color: AppColors.textSecondary),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
-      
       style: ButtonStyle(
         textStyle: WidgetStateProperty.all(
-           TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+          TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
         ),
         backgroundColor: WidgetStateProperty.all(Colors.green.shade500),
         foregroundColor: WidgetStateProperty.all(Colors.black),
-        
+
         minimumSize: WidgetStateProperty.all(Size.fromHeight(50)),
         shape: WidgetStateProperty.all(
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -70,16 +69,22 @@ mixin AppTheme {
       backgroundColor: Color(0xffF5F7F9),
       elevation: 0,
     ),
+
     inputDecorationTheme: const InputDecorationTheme(
       filled: true,
       fillColor: AppColors.white,
+
       border: OutlineInputBorder(
         borderRadius: BorderRadius.all(Radius.circular(12)),
-        borderSide: BorderSide(color: AppColors.textSecondary),
+        borderSide: BorderSide(color: AppColors.grey2),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(12)),
+        borderSide: BorderSide(color: AppColors.grey1),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.all(Radius.circular(12)),
-        borderSide: BorderSide(color: AppColors.primary, width: 2),
+        borderSide: BorderSide(color: AppColors.green, width: 2),
       ),
     ),
   );
@@ -136,12 +141,17 @@ mixin AppTheme {
       elevation: 0,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.red,
-        foregroundColor: Colors.white,
-        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+      style: ButtonStyle(
+        textStyle: WidgetStateProperty.all(
+          TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+        ),
+        backgroundColor: WidgetStateProperty.all(Colors.green.shade500),
+        foregroundColor: WidgetStateProperty.all(Colors.black),
+
+        minimumSize: WidgetStateProperty.all(Size.fromHeight(50)),
+        shape: WidgetStateProperty.all(
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        ),
       ),
     ),
 
